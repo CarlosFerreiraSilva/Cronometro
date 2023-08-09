@@ -1,0 +1,19 @@
+html,body{
+    height: 100%;
+    width:100%;
+    background: radial-gradient(circle, rgba(172,93,255,1) 0%, rgba(64,14,102,1) 100%);
+}
+
+.card{
+    box-shadow: 10px 5px 5px purple;
+    padding: 30px;
+    border-radius: 5%;
+}
+
+.card:hover{
+transform: scale(1.1);
+}
+
+.btn{
+    box-shadow: 2px 1px 1px gray;
+}
