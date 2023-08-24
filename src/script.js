@@ -6,6 +6,8 @@ var intervalId;
 var contador = 0;
 
 iniciar.addEventListener('click', () => {
+    iniciar.style.display =  "none"
+    pausar.style.display = "inline"
     if (!intervalId) {
         intervalId = setInterval(function() {
             contador += 1;
@@ -15,11 +17,15 @@ iniciar.addEventListener('click', () => {
 });
 
 pausar.addEventListener('click', () => {
+    iniciar.style.display =  "inline"
+    pausar.style.display = "none"
     clearInterval(intervalId);
     intervalId = null;
 });
 
 reiniciar.addEventListener('click', () => {
+    iniciar.style.display =  "inline"
+    pausar.style.display = "none"
     clearInterval(intervalId);
     intervalId = null;
     contador = 0;
@@ -36,4 +42,12 @@ function displayCronometro() {
     var minutesDisplay = minutes.toString().padStart(2, '0');
 
     cronometroElement.innerHTML = `${minutesDisplay}:${secondsDisplay}:${centisecondsDisplay}`;
+}
+
+function mostrar(){
+
+}
+
+function naomostrar(){
+
 }
